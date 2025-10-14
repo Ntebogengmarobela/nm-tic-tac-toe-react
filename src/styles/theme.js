@@ -15,7 +15,7 @@ export const lightTheme = {
     yellow: "#f9c811",
     // cream: "#f5f5dc",
 
-    text: "202124",
+    text: "#202124",
   },
   size: {
     web: {
