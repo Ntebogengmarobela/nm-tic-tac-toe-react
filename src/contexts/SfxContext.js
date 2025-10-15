@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext} from "react";
 import useSound from "use-sound";
 
 export const SfxContext = createContext({});
