@@ -1,6 +1,6 @@
 import React from "react";
 import { PlayerWrapper } from "./Player.style";
-import {Avatar} from "react-nice-avatar";
+import Avatar from "react-nice-avatar";
 import { Subtitle} from "../../styles/General.styled";
 import { AvatarWrapper } from "./Player.style";
 
