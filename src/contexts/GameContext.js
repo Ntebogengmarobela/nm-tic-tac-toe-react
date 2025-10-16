@@ -39,6 +39,7 @@ export const GameContextProvider = (props) => {
       ...game,
       board: [null, null, null, null, null, null, null, null, null],
       turn: "x",
+      winningCombo: []
     });
   };
 
@@ -61,6 +62,7 @@ export const GameContextProvider = (props) => {
       },
       turn: "x",
       roundWinner: "",
+      winningCombo: []
     });
 
   }
@@ -81,7 +83,7 @@ export const GameContextProvider = (props) => {
     }));
   };
 
-  const updateScore = (winner) => {
+  const updateScore = (winner, result) => {
     // winner is always going to be:
     // player1, player2, draw
 
@@ -97,6 +99,7 @@ export const GameContextProvider = (props) => {
           score: prevGame.player2.score + 0.5,
         },
         roundWinner: "",
+        winningCombo: [0,1,2,3,4,5,6,7,8]
       }));
     } else {
       setGame((prevGame) => ({
@@ -106,6 +109,7 @@ export const GameContextProvider = (props) => {
           score: prevGame[winner].score + 1,
         },
         roundWinner: prevGame[winner],
+        winningCombo: result,
       }));
     }
   };
@@ -129,7 +133,8 @@ export const GameContextProvider = (props) => {
         updateBoard,
         resetBoard,
         roundComplete,
-        restartGame
+        restartGame,
+        
       }}
     >
       {props.children}

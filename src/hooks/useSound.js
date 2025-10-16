@@ -5,11 +5,11 @@ const useSound = (url, options) => {
   useEffect(() => {
     const audio = new Audio(url);
 
-    audio.load()
-    audio.volume = options.volume
+    audio.load();
+    audio.volume = options.volume;
 
     setSound(audio);
-  }, [])
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return () => {
     if (sound) {
@@ -18,8 +18,8 @@ const useSound = (url, options) => {
     setTimeout(() => {
       sound.pause();
       sound.currentTime = 0;
-    }, options.timeout)
-  }
+    }, options.timeout);
+  };
 }
 
 

@@ -36,3 +36,7 @@ export const CellStyle = styled.button`
     }
   }
 `;
+
+      
+export const winningCombo = styled.button`
+ background-color: #ffff00`
