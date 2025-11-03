@@ -23,7 +23,6 @@ function MusicPlayer() {
       if (playerRef.current?.volume) playerRef.current.volume = 0.1;
 
       return;
-      console.log(playerRef.current.play());
     }
     playerRef.current.pause();
   }, [isPlaying, currentSong]);
